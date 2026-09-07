@@ -1,0 +1,16 @@
+-- Show all 
+SELECT *
+FROM student;
+
+-- Show selected columns
+SELECT student_id, student_name, cgpa
+FROM student;
+
+--Use column alias
+SELECT student_name AS name, cgpa AS result
+FROM student;
+
+--Concatenate columns(The || operator joins text and column values in Oracle SQL)
+SELECT student_name || ' studies in department ID ' || dept_id AS student_info 
+FROM student;
+
