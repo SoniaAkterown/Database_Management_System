@@ -1,0 +1,18 @@
+INSERT INTO department VALUES (1, 'CSE', 'Knowledge Tower');
+INSERT INTO department VALUES (2, 'SWE', 'AB Building');
+INSERT INTO department VALUES (3, 'EEE', 'Engineering Building');
+INSERT INTO department VALUES (4, 'BBA', 'Business Building');
+INSERT INTO department VALUES (5, 'English', 'Humanities Building');
+INSERT INTO department VALUES (6, 'Pharmacy', 'Health Science Building');
+
+INSERT INTO student VALUES (101, 'Rahim Ahmed', 'Male', 'rahim101@diu.edu.bd', 3.75, 2023, 1);
+INSERT INTO student VALUES (102, 'Karim Hasan', 'Male', 'karim102@diu.edu.bd', 3.40, 2022, 1);
+INSERT INTO student VALUES (103, 'Nusrat Jahan', 'Female', 'nusrat103@diu.edu.bd', 3.90, 2023, 2);
+INSERT INTO student VALUES (104, 'Farhana Akter', 'Female', 'farhana104@diu.edu.bd', 3.20, 2021, 2);
+INSERT INTO student VALUES (105, 'Sakib Islam', 'Male', 'sakib105@diu.edu.bd', 2.95, 2022, 3);
+INSERT INTO student VALUES (106, 'Tamim Hossain', 'Male', 'tamim106@diu.edu.bd', 3.60, 2024, 1);
+INSERT INTO student VALUES (107, 'Ayesha Siddika', 'Female', 'ayesha107@diu.edu.bd', 3.85, 2024, 4);
+INSERT INTO student VALUES (108, 'Mehedi Hasan', 'Male', 'mehedi108@diu.edu.bd', 3.10, 2021, 3);
+INSERT INTO student VALUES (109, 'Jannatul Ferdous', 'Female', 'jannatul109@diu.edu.bd', 3.95, 2023, 1);
+INSERT INTO student VALUES (110, 'Rafi Ahmed', 'Male', 'rafi110@diu.edu.bd', 2.80, 2022, NULL);
+COMMIT; // COMMIT permanently saves the inserted records
