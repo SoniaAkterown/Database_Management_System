@@ -1,0 +1,10 @@
+-- WHERE(use for condition):
+-- 1.Students with CGPA greater than 3.50
+SELECT *
+FROM student
+WHERE cgpa > 3.50;
+
+-- 2.Students from CSE department
+SELECT *
+FROM student
+WHERE dept_id = 1;
