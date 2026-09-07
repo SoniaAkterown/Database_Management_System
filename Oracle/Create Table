@@ -1,0 +1,17 @@
+CREATE TABLE department (
+ dept_id NUMBER PRIMARY KEY,
+ dept_name VARCHAR2(100) NOT NULL,
+ building VARCHAR2(100)
+);
+CREATE TABLE student (
+ student_id NUMBER PRIMARY KEY,
+ student_name VARCHAR2(100) NOT NULL,
+ gender VARCHAR2(10),
+ email VARCHAR2(100) UNIQUE,
+ cgpa NUMBER(3,2),
+ admission_year NUMBER,
+ dept_id NUMBER,
+ CONSTRAINT fk_student_department
+ FOREIGN KEY (dept_id)
+ REFERENCES department(dept_id)
+);
