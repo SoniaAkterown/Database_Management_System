@@ -1,0 +1,39 @@
+-- AND operator (Both conditions must be true)
+-- Example:
+SELECT *
+FROM student
+WHERE dept_id = 1
+AND cgpa > 3.50;
+
+-- OR operator (At least one condition must be true ):
+-- Example:
+SELECT *
+FROM student
+WHERE dept_id = 1
+OR dept_id = 2;
+
+-- NOT operator ( Shows students who are not from department ID 1 )
+-- Example:
+SELECT *
+FROM student
+WHERE NOT dept_id = 1;
+
+-- BETWEEN ( Includes both boundary values ):
+-- Example:
+SELECT *
+FROM student
+WHERE cgpa BETWEEN 3.00 AND 3.80;
+
+-- IN (Matches any value in the given list):
+-- Example:
+SELECT *
+FROM student
+WHERE dept_id IN (1, 2, 3);
+
+
+-- NOT IN :
+-- Example:
+SELECT *
+FROM student
+WHERE dept_id NOT IN (1, 2);
+
