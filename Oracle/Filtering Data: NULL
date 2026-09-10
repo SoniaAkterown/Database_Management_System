@@ -1,0 +1,8 @@
+-- NULL (NULL is used to find missing values) :
+-- Example :
+SELECT *
+FROM student
+WHERE dept_id IS NOT NULL;
+
+
+
