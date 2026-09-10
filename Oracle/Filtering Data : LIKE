@@ -5,3 +5,25 @@
 --  3. containing
 
 
+--  1. starting:
+-- Example :
+SELECT *
+FROM student
+WHERE student_name LIKE 'A%';
+-- Here ,A% means the name starts with A .
+
+
+--  2. ending :
+-- Example :
+SELECT *
+FROM student
+WHERE student_name LIKE '%n';
+-- Here ,%n means the name ends with n.
+
+
+--  3. containing
+-- Example :
+SELECT *
+FROM student
+WHERE student_name LIKE '%Hasan%';
+-- Here ,  %Hasan% means Hasan appears anywhere in the name.
