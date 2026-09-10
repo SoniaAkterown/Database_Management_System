@@ -4,5 +4,11 @@ SELECT *
 FROM student
 WHERE dept_id IS NOT NULL;
 
+-- Replace NULL using NVL (NVL replaces NULL with another value ):
+-- Example :
+SELECT student_name,
+ NVL(TO_CHAR(dept_id), 'No Department') AS department_status
+FROM student;
+
 
 
