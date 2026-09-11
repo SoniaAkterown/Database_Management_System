@@ -1,0 +1,11 @@
+-- Sorting Data :
+-- Example :
+SELECT *
+FROM student
+ORDER BY cgpa ASC;
+
+-- Sort by CGPA descending :
+-- Example :
+SELECT *
+FROM student
+ORDER BY cgpa DESC;
