@@ -9,3 +9,19 @@ SELECT MAX(cgpa) AS highest_cgpa
 FROM student;
 
 
+-- Minimum :
+-- Example :
+SELECT MIN(cgpa) AS lowest_cgpa
+FROM student;
+
+-- Average :
+-- Example :
+SELECT ROUND(AVG(cgpa), 2) AS average_cgpa
+FROM student;
+
+
+-- Sum :
+-- Example :
+SELECT SUM(cgpa) AS total_cgpa
+FROM student;
+
