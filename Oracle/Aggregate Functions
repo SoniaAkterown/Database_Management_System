@@ -1,0 +1,11 @@
+-- Count ( Counts all ) :
+-- Example :
+SELECT COUNT(*) AS total_students
+FROM student;
+
+--  Maximum :
+-- Example :
+SELECT MAX(cgpa) AS highest_cgpa
+FROM student;
+
+
