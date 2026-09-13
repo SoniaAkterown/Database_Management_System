@@ -1,0 +1,13 @@
+-- GROUP BY and HAVING :
+-- HAVING filters grouped data
+
+-- Example For GROUP BY :
+SELECT dept_id, COUNT(*) AS total_students
+FROM student
+GROUP BY dept_id;
+
+-- Example For HAVING :
+SELECT dept_id, COUNT(*) AS total_students
+FROM student
+GROUP BY dept_id
+HAVING COUNT(*) > 2;
