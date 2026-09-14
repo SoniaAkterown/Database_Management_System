@@ -1,0 +1,4 @@
+-- UPPER (Converts names to uppercase) : 
+
+SELECT student_name, UPPER(student_name) AS upper_name
+FROM student;
