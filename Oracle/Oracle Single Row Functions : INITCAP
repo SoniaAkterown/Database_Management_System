@@ -1,0 +1,4 @@
+-- INITCAP (Capitalizes the first letter of each word ) :
+
+SELECT student_name, INITCAP(student_name) AS formatted_name
+FROM student;
