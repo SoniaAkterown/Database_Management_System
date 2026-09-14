@@ -1,0 +1,4 @@
+-- LENGTH (Counts characters in the name) :
+
+SELECT student_name, LENGTH(student_name) AS name_length
+FROM student;
