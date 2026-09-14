@@ -2,3 +2,4 @@
 
 SELECT student_name, LOWER(student_name) AS lower_name
 FROM student;
+
