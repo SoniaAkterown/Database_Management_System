@@ -1,0 +1,4 @@
+-- SYSDATE ( current system date ) :
+
+SELECT SYSDATE AS current_date
+FROM dual;
