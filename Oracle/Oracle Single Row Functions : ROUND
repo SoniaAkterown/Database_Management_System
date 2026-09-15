@@ -1,0 +1,4 @@
+-- ROUND (Nearest value) :
+
+SELECT student_name, cgpa, ROUND(cgpa, 1) AS rounded_cgpa
+FROM student;
