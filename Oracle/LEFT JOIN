@@ -1,0 +1,6 @@
+-- LEFT JOIN ( All left + matched right ) :
+-- Example :
+SELECT s.student_name,d.dept_name
+FROM Student s
+LEFT OUTER JOIN Department d
+ON s.dept_id=d.dept_id;
