@@ -1,0 +1,6 @@
+-- FULL OUTER JOIN ( All rows ) :
+Example :
+SELECT s.student_name, d.dept_name
+FROM student s
+FULL OUTER JOIN department d
+ON s.dept_id = d.dept_id;
