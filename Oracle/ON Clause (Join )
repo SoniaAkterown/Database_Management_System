@@ -1,0 +1,5 @@
+-- ON Clause (Explicit condition):
+-- Example :
+SELECT *
+FROM Student s JOIN Department d
+ON s.dept_id=d.dept_id;
