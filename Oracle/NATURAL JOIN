@@ -1,0 +1,4 @@
+-- NATURAL JOIN ( Common columns automatically ) :
+-- Example :
+SELECT * FROM Student
+NATURAL JOIN Department;
