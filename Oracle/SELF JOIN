@@ -1,0 +1,6 @@
+-- SELF JOIN ( Same table ) :
+-- Example :
+SELECT e.name Employee,m.name Manager
+FROM Employee e
+LEFT JOIN Employee m
+ON e.manager_id=m.emp_id;
