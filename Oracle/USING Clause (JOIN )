@@ -1,0 +1,5 @@
+-- USING Clause (Same column names);
+-- Example :
+SELECT student_name,dept_name
+FROM Student JOIN Department
+USING(dept_id);
