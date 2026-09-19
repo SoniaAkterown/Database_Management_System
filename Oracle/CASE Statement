@@ -1,0 +1,24 @@
+-- CASE Statement (works like if-else logic) :
+--Example-1.Student result category
+
+SELECT student_id,
+ student_name,
+ cgpa,
+ CASE
+ WHEN cgpa >= 3.75 THEN 'Excellent'
+ WHEN cgpa >= 3.50 THEN 'Very Good'
+ WHEN cgpa >= 3.00 THEN 'Good'
+ WHEN cgpa >= 2.50 THEN 'Average'
+ ELSE 'Needs Improvement'
+ END AS result_category
+FROM student;
+
+-- Example-2.Department type
+
+SELECT dept_name,
+ CASE
+ WHEN dept_name IN ('CSE', 'SWE', 'EEE') THEN 'Engineering Department'
+ ELSE 'Non-Engineering Department'
+ END AS dept_type
+FROM department;
+
