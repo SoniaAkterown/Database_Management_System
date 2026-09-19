@@ -1,0 +1,44 @@
+-- Subqueries :
+-- 1.Students with CGPA greater than average
+SELECT *
+FROM student
+WHERE cgpa > (
+ SELECT AVG(cgpa)
+ FROM student
+);
+
+--2.Student with highest CGPA
+SELECT *
+FROM student
+WHERE cgpa = (
+ SELECT MAX(cgpa)
+ FROM student
+);
+
+-- 3.Students from CSE using subquery
+SELECT *
+FROM student
+WHERE dept_id = (
+ SELECT dept_id
+ FROM department
+ WHERE dept_name = 'CSE'
+);
+
+-- 4.Students from departments in Knowledge Tower
+SELECT *
+FROM student
+WHERE dept_id IN (
+ SELECT dept_id
+ FROM department
+ WHERE building = 'Knowledge Tower'
+);
+
+-- 5.Students above their department average
+SELECT s.student_id, s.student_name, s.cgpa, s.dept_id
+FROM student s
+WHERE s.cgpa > (
+ SELECT AVG(s2.cgpa)
+ FROM student s2
+ WHERE s2.dept_id = s.dept_id
+);
+
