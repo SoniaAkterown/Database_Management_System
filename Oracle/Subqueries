@@ -42,3 +42,51 @@ WHERE s.cgpa > (
  WHERE s2.dept_id = s.dept_id
 );
 
+--Second Highest:
+-- Second highest CGPA
+SELECT MAX(cgpa) AS second_highest_cgpa
+FROM student
+WHERE cgpa < (
+ SELECT MAX(cgpa)
+ FROM student
+);
+
+--Student with second highest CGPA
+SELECT *
+FROM student
+WHERE cgpa = (
+ SELECT MAX(cgpa)
+ FROM student
+ WHERE cgpa < (
+ SELECT MAX(cgpa)
+ FROM student
+ )
+);
+
+--3rd highest CGPA
+SELECT *
+FROM (
+ SELECT student_id, student_name, cgpa,
+ DENSE_RANK() OVER (ORDER BY cgpa DESC) AS cgpa_rank 
+ FROM student
+)
+WHERE cgpa_rank = 3;
+
+--Departments having students
+SELECT *
+FROM department d
+WHERE EXISTS (
+ SELECT 1
+ FROM student s
+ WHERE s.dept_id = d.dept_id
+);
+
+--Departments without students
+SELECT *
+FROM department d
+WHERE NOT EXISTS (
+ SELECT 1
+ FROM student s
+ WHERE s.dept_id = d.dept_id
+);
+
