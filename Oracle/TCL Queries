@@ -6,6 +6,9 @@ COMMIT;
 -- ROLLBACK ( Cancels changes that are not committed):
 ROLLBACK;
 
+-- SAVEPOINT( Creates a point to which you can roll back):
+SAVEPOINT sp1;
 
-
-
+-- ROLLBACK TO SAVEPOINT (Cancels changes made after savepoint):
+-- Example:
+ROLLBACK TO sp1;
