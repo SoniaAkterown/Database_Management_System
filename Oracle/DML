@@ -1,0 +1,22 @@
+--  DML :
+
+-- 1.Insert(Adds a new):
+--Example :
+INSERT INTO student
+(student_id, student_name, gender, email, cgpa, admission_year, dept_id)
+VALUES
+(111, 'Naimur Rahman', 'Male', 'naimur111@diu.edu.bd', 3.55, 2024, 1);
+
+
+-- 2.Update(Updates):
+--1.Example :
+UPDATE student
+SET cgpa = 3.80
+WHERE student_id = 102;
+--2.Example :
+UPDATE student
+SET dept_id = 2
+WHERE student_id = 110;
+
+
+-- 3.
