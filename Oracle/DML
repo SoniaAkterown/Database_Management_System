@@ -19,4 +19,11 @@ SET dept_id = 2
 WHERE student_id = 110;
 
 
--- 3.
+-- 3.Delete :
+--1.Example :
+DELETE FROM student
+WHERE student_id = 111;
+--2.Example :
+DELETE FROM student
+WHERE cgpa < 2.50;
+
