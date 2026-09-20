@@ -1,0 +1,22 @@
+--ALTER(Add column,Modify column,Drop column,Rename column,Rename back) :
+
+-- Add column :
+ALTER TABLE student
+ADD phone VARCHAR2(20);
+
+-- Modify column :
+ALTER TABLE student
+MODIFY student_name VARCHAR2(150);
+
+-- Drop column :
+ALTER TABLE student
+DROP COLUMN phone;
+
+--Rename column :
+ALTER TABLE student
+RENAME COLUMN student_name TO full_name;
+
+-- Rename back :
+ALTER TABLE student
+RENAME COLUMN full_name TO student_name;
+
