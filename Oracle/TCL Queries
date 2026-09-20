@@ -1,0 +1,11 @@
+-- TCL Queries :
+
+-- COMMIT(Permanently saves the transaction) :
+COMMIT;
+
+-- ROLLBACK ( Cancels changes that are not committed):
+ROLLBACK;
+
+
+
+
