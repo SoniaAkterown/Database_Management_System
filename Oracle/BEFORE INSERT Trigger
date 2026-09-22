@@ -1,0 +1,18 @@
+-- BEFORE INSERT Trigger
+
+CREATE OR REPLACE TRIGGER trg_before_insert_student
+BEFORE INSERT
+ON students
+FOR EACH ROW
+BEGIN
+IF :NEW.cgpa > 4.00 THEN
+:NEW.cgpa := 4.00;
+END IF;
+END;
+/
+
+Test the Trigger
+INSERT INTO students VALUES (5, 'Sadia', 'CSE', 4.50);
+
+Then check:
+SELECT * FROM students;
