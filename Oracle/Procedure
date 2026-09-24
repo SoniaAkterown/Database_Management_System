@@ -1,0 +1,32 @@
+--  Procedure :
+-- Basic Structure :
+CREATE OR REPLACE PROCEDURE name
+IS
+BEGIN
+-- work
+END;
+/
+
+-- Step 1: Table
+CREATE TABLE students (
+student_id NUMBER,
+name VARCHAR2(50)
+);
+-- Step 2: Insert Data
+INSERT INTO students VALUES (1, 'Amina');
+INSERT INTO students VALUES (2, 'Rahim');
+
+-- 5. Example
+CREATE OR REPLACE PROCEDURE show_students
+IS
+BEGIN
+FOR x IN (SELECT * FROM students) LOOP
+DBMS_OUTPUT.PUT_LINE(x.student_id || ' ' || x.name);
+END LOOP;
+END;
+/
+Run
+EXEC show_students;
+
+
+
