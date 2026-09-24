@@ -1,31 +1,45 @@
 -- View (virtual table):
 
--- View Syntax
+-- View Syntax :
 CREATE VIEW view_name AS
 SELECT column1, column2
 FROM table_name
 WHERE condition;
 
--- Example Table for View
---Create students table
+-- Example Table for View :
+--Create students table :
 CREATE TABLE students (
 student_id NUMBER PRIMARY KEY,
 name VARCHAR2(50),
 department VARCHAR2(30),
 cgpa NUMBER(3,2)
 );
---Insert data
+--Insert data :
 INSERT INTO students VALUES (1, 'Amina', 'CSE', 3.80);
 INSERT INTO students VALUES (2, 'Rahim', 'EEE', 3.45);
 INSERT INTO students VALUES (3, 'Karim', 'CSE', 3.90);
 
--- create a View
+-- create a View :
 CREATE VIEW cse_students AS
 SELECT student_id, name, cgpa
 FROM students
 WHERE department = 'CSE';
 
--- Use the View
+-- Use the View :
 SELECT * FROM cse_students;
 
+
+-- Another Example :
+CREATE VIEW student_basic_info AS
+SELECT name, department
+FROM students;
+SELECT * FROM student_basic_info;
+
+--Update a View :
+CREATE OR REPLACE VIEW cse_students AS
+SELECT student_id, name, cgpa
+FROM students
+WHERE department = 'CSE' AND cgpa > 3.70;
+--Delete a View :
+DROP VIEW cse_students;
 
