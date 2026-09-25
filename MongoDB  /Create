@@ -1,0 +1,24 @@
+db.createCollection("department", {
+   validator: {
+      $jsonSchema: {
+         bsonType: "object",
+         required: ["_id", "dept_name"], // Primary Key এবং NOT NULL কনস্ট্রেইন্ট
+         properties: {
+            _id: {
+               bsonType: "number",
+               description: "dept_id (Primary Key) - must be a number and is required"
+            },
+            dept_name: {
+               bsonType: "string",
+               maxLength: 100,
+               description: "dept_name - must be a string up to 100 chars and is required"
+            },
+            building: {
+               bsonType: "string",
+               maxLength: 100,
+               description: "building - must be a string up to 100 chars"
+            }
+         }
+      }
+   }
+});
