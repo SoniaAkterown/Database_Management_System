@@ -1,0 +1,19 @@
+# ADD COLUMN :
+
+# Syntax :
+ALTER TABLE table_name
+ADD column_name data_type;
+
+# Example :
+# 1. Add a single column 
+ALTER TABLE students
+ADD phone_number VARCHAR(15);
+
+# 2. Add a column with a default value 
+ALTER TABLE students
+ADD status VARCHAR(20) DEFAULT 'Active';
+
+# 3. Add multiple columns 
+ALTER TABLE students
+ADD date_of_birth DATE,
+ADD blood_group VARCHAR(5);
