@@ -1,7 +1,10 @@
 # Create Table :
 # Example :
-CREATE TABLE cars (
-  brand VARCHAR(255),
-  model VARCHAR(255),
-  year INT
+CREATE TABLE students (
+    student_id INT PRIMARY KEY,
+    name VARCHAR(100),
+    department VARCHAR(50),
+    roll_number INT,
+    gpa DECIMAL(3, 2),
+    email VARCHAR(100)
 );
