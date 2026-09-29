@@ -9,3 +9,8 @@ WHERE student_id = 103;
 UPDATE students
 SET department = 'Software Engineering', gpa = 3.90
 WHERE student_id = 101;
+
+
+# Without the WHERE  clause :
+UPDATE students
+SET status = 'Active';
