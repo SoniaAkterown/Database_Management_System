@@ -1,0 +1,11 @@
+# UPDATE :
+
+# Update a Single :
+UPDATE students
+SET department = 'CSE'
+WHERE student_id = 103;
+
+# Update Multiple Columns :
+UPDATE students
+SET department = 'Software Engineering', gpa = 3.90
+WHERE student_id = 101;
