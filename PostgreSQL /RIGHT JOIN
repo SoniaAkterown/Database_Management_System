@@ -1,0 +1,6 @@
+-- RIGHT JOIN: All right + matched left
+
+SELECT students.name, enrollments.course_name
+FROM students
+RIGHT JOIN enrollments 
+    ON students.student_id = enrollments.student_id;
