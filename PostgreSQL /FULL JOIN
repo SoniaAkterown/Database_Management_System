@@ -1,0 +1,6 @@
+-- FULL JOIN: All records from both (NULL for non-matches)
+
+SELECT students.name, enrollments.course_name
+FROM students
+FULL OUTER JOIN enrollments 
+    ON students.student_id = enrollments.student_id;
