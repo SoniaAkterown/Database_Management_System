@@ -1,0 +1,22 @@
+-- Basic Syntax & Creation :
+CREATE INDEX idx_student_dept_cgpa 
+ON student (dept_id, cgpa);
+
+-- Sorting (ORDER BY) :
+CREATE INDEX idx_student_dept_cgpa_desc 
+ON student (dept_id ASC, cgpa DESC);
+SELECT * FROM student 
+WHERE dept_id = 1 
+ORDER BY cgpa DESC;
+
+-- Index-Only Scan :
+CREATE INDEX idx_student_dept_with_name 
+ON student (dept_id) 
+INCLUDE (student_name, cgpa);
+SELECT dept_id, student_name, cgpa 
+FROM student 
+WHERE dept_id = 2;
+
+-- Production Safe: Non-blocking Creation :
+CREATE INDEX CONCURRENTLY idx_student_year_dept 
+ON student (admission_year, dept_id);
