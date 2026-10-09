@@ -1,0 +1,22 @@
+-- Basic Single-Column Index :
+
+CREATE INDEX idx_student_email 
+ON student (email);
+
+-- Unique Index :
+CREATE UNIQUE INDEX idx_student_roll 
+ON student (roll_number);
+
+-- Composite Index :
+CREATE INDEX idx_student_dept_cgpa 
+ON student (dept_id, cgpa);
+
+-- Partial Index :
+CREATE INDEX idx_student_high_cgpa 
+ON student (cgpa)
+WHERE cgpa >= 3.75;
+
+-- Production-Friendly: Non-blocking Index (CONCURRENTLY) :
+CREATE INDEX CONCURRENTLY idx_student_name 
+ON student (student_name);
+
