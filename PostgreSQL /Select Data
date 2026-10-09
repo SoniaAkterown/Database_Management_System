@@ -1,11 +1,11 @@
-# Select Data :
+-- Select Data :
 
-# Specify Columns :
-# Examplle-1 :
+-- Specify Columns :
+-- Examplle-1 :
 SELECT name, department FROM students;
 
-# Examplle-2 :
+-- Examplle-2 :
 SELECT name, roll_number, gpa FROM students;
 
-# ALL Columns :
+-- ALL Columns :
 SELECT * FROM students;
