@@ -1,15 +1,15 @@
 INSERT INTO students (student_id, name, department, roll_number, gpa, email) 
 VALUES (101, 'Rahim Ahmed', 'CSE', 1, 3.85, 'rahim@example.com');
 
-# Display Table :
+-- Display Table :
 SELECT * FROM students;
 
-# Insert Multiple Rows
+-- Insert Multiple Rows
 INSERT INTO students (student_id, name, department, roll_number, gpa, email)
 VALUES
   (102, 'Fatima Noor', 'EEE', 2, 3.90, 'fatima@example.com'),
   (103, 'Tanvir Hasan', 'BBA', 5, 3.65, 'tanvir@example.com'),
   (104, 'Sadia Akter', 'English', 3, 3.75, 'sadia@example.com');
 
-# Display Table :
+-- Display Table :
 SELECT * FROM students;
