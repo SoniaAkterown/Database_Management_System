@@ -1,0 +1,15 @@
+-- Basic Syntax :
+DROP INDEX idx_student_email;
+
+
+-- Safe Drop (IF EXISTS) :
+DROP INDEX IF EXISTS idx_student_email;
+
+-- Production-Friendly: Non-blocking Drop (CONCURRENTLY) :
+DROP INDEX CONCURRENTLY IF EXISTS idx_student_name;
+
+-- RESTRICT (Default): 
+DROP INDEX idx_student_roll RESTRICT;
+
+-- CASCADE :
+DROP INDEX idx_student_roll CASCADE;
