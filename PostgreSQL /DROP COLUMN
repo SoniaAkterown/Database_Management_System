@@ -1,12 +1,12 @@
-# single column :
+-- single column :
 ALTER TABLE students
 DROP COLUMN email;
 
-# Multiple column :
+-- Multiple column :
 ALTER TABLE students
 DROP COLUMN roll_number,
 DROP COLUMN email;
 
-# CASCADE :
+-- CASCADE :
 ALTER TABLE students
 DROP COLUMN department CASCADE;
