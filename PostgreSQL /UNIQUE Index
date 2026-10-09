@@ -1,0 +1,20 @@
+-- Basic Single-Column UNIQUE Index :
+CREATE UNIQUE INDEX idx_student_email_unique
+ON student (email);
+
+-- Multi-Column (Composite) UNIQUE Index :
+CREATE UNIQUE INDEX idx_dept_roll_unique
+ON student (dept_id, roll_number);
+
+-- Partial UNIQUE Index :
+CREATE UNIQUE INDEX idx_active_student_email
+ON student (email)
+WHERE is_deleted = false;
+
+-- Handling NULL Values (NULLS NOT DISTINCT) :
+CREATE UNIQUE INDEX idx_student_phone_unique
+ON student (phone_number) NULLS NOT DISTINCT;
+
+-- Production-Friendly: Non-blocking Creation :
+CREATE UNIQUE INDEX CONCURRENTLY idx_student_reg_unique
+ON student (reg_no);
