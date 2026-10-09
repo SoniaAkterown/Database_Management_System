@@ -1,0 +1,6 @@
+INSERT INTO student (student_id, student_name, gender, email, cgpa, admission_year, dept_id)
+VALUES (111, 'Naimur Rahman', 'Male', 'naimur111@diu.edu.bd', 3.65, 2024, 1)
+ON CONFLICT (student_id) 
+DO UPDATE SET 
+    cgpa = EXCLUDED.cgpa,
+    email = EXCLUDED.email;
